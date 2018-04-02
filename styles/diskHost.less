@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+html {
+	height: 100%;
+	body {
+		background: url(./../images/diskHost/bg.png) no-repeat;
+		background-size: 100% 100%;
+		overflow: hidden;
+		transform-origin: 0 0 0;
+        -moz-user-select: -moz-none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+	}
+}
+/**
+ * 磁盘状态
+ */
+.diskStatus {
+    position: absolute;
+    top: 46px;
+    left: 1280px;
+    width: 455px;
+    height: 276px;
+    h2 {
+    	height: 32px;
+    	line-height: 32px;
+    	font-size: 32px;
+    	margin-bottom: 15px;
+    	color: #82b7ff;
+    }
+    .diskInfo {
+    	width: 455px;
+    	height: 220px;
+    	float: left;
+    	background: url(./../images/diskHost/diskInfoBg.png) no-repeat;
+    	.chart {
+    		width: 284px;
+    		float: left;
+    		padding-left: 32px;
+    		h3 {
+    			height: 66px;
+    			line-height: 66px;
+    			font-size: 30px;
+    			color: #5e8fff;
+    			span {
+                    color: #fff;
+    			}
+    		}
+    		ul {
+    			width: 280px;
+    			height: 131px;
+    			border: 2px solid #5e8fff;
+    			border-radius: 4px;
+    			li {
+    				width: 26px;
+    				height: 11px;
+    				background: #5e8fff;
+    				border-radius: 2px;
+                    float: left;
+                    margin: 1px;
+    			}
+                .broken {
+                    background: #fb4343;
+                }
+    		}
+    	}
+    	.share {
+            width: 104px;
+            float: left;
+            height: 220px;
+            margin-left: 35px;
+            li.id1{
+            	list-style-type: disc;
+            	color: #f44647;
+	            .name {
+	                font-size: 26px;
+	                line-height: 46px;
+	                color: #f44647;
+	            }
+            }
+            li.id2{
+            	list-style-type: disc;
+            	color: #5e8fff;
+	            .name {
+	                font-size: 26px;
+	                line-height: 46px;
+	                color: #5e8fff;
+	            }
+            }
+            p {
+                font-size: 22px;
+                line-height: 30px;
+                color: #fff;
+            }
+    	}
+    }
+}
+/**
+ * 磁盘告警列表
+ */
+.alarmList {
+    position: absolute;
+    top: 93px;
+    left: 1769px;
+    height: 230px;
+    width: 644px;
+    li {
+        height: 46px;
+        line-height:46px;
+        font-size: 24px;
+        color: #b1b1b1;
+        &:first-child {
+            color: #fff;
+            background: url(./../images/diskHost/alarmListHover.png) no-repeat;
+        }
+    }
+    .title {
+        float: left;
+        padding-left: 16px;
+        width: 525px;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+    }
+    .time {
+        float: right;
+        padding-right: 16px;
+    }
+}
+/**
+ * 磁盘故障历史
+ */
+.faultHistory {
+    position: absolute;
+    top: 369px;
+    left: 1281px;
+    height: 518px;
+    width: 1111px;
+    background: url(./../images/diskHost/faultHistoryBg.png) no-repeat;
+    h2 {
+        font-size: 32px;
+        color: #82b7ff;
+        margin-top: 28px;
+        padding-left: 94px;
+    }
+    .total {
+        width: 300px;
+        height: 100px;
+        margin-left: 430px;
+        .name {
+            font-size: 28px;
+            color: #82b7ff;
+            text-align: center;
+            line-height: 40px;
+        }
+        .amount {
+            font-size: 33px;
+            color: #ffac1b;
+            text-align: center;
+            line-height: 53px;
+        }
+    }
+    .pie {
+        width: 300px;
+        height: 300px;
+        margin-left: 407px;
+        margin-top: 56px;
+        position: absolute;
+    }
+    .list {
+        li {
+            width: 305px;
+            height: 120px;
+            padding-top: 9px;
+            p {
+                font-size: 21px;
+                line-height: 32px;
+                padding-left: 150px;
+                color: #fff;
+            }
+            p.notRepair {
+                padding-left: 146px;
+                color: #0d234e;
+                .value {
+                    padding-left:10px;
+                    color: #ffac1b;
+                }
+            }
+            &:nth-child(1) {
+                position: absolute;
+                left: 84px;
+                background: url(./../images/diskHost/sugon.png) no-repeat;
+                p {
+                    padding-left: 178px;
+                }
+            }
+            &:nth-child(2) {
+                position: absolute;
+                left: 84px;
+                top: 310px;
+                background: url(./../images/diskHost/langchaoM4.png) no-repeat;
+                p {
+                    padding-left: 178px;
+                }
+            }
+            &:nth-child(3) {
+                position: absolute;
+                left: 770px;
+                top: 80px;
+                background: url(./../images/diskHost/IBM.png) no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                left: 770px;
+                top: 228px;
+                background: url(./../images/diskHost/huawei2485.png) no-repeat;
+            }
+            &:nth-child(5) {
+                position: absolute;
+                left: 770px;
+                top: 378px;
+                background: url(./../images/diskHost/huawei2288.png) no-repeat;
+            }
+        }
+    }
+}
+/**
+ * 网络设备性能Top5
+ */
+.network {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 464px;
+    width: 1279px;
+    padding-top:45px;
+    .head {
+        width: 210px;
+        height: 124px;
+        margin-top: 45px;
+        margin-left:98px;
+        margin-right:93px;
+        background: url(./../images/diskHost/networkLogo.png) no-repeat;
+        float:left;
+    }
+    .networkList {
+        li {
+            width: 400px;
+            height: 200px;
+            float: left;
+            margin-bottom:0px;
+            .rada {
+                width: 300px;
+                height: 200px;
+                margin-left:60px;
+            }
+        }
+    }
+    .nameList {
+        li {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            &:nth-child(1) {
+                left: 450px;
+                top: 135px;
+            }
+            &:nth-child(2) {
+                left: 867px;
+                top: 135px;
+            }
+            &:nth-child(3) {
+                left: 52px;
+                top: 340px;
+            }
+            &:nth-child(4) {
+                left: 450px;
+                top: 340px;
+            }
+            &:nth-child(5) {
+                left: 867px;
+                top: 340px;
+            }
+            .text {
+                position: absolute;
+                display:none;
+                .name {
+                    font-size: 25px;
+                    color: #b1b1b1;
+                }
+                .value {
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: 25px;
+                }
+                &:nth-child(1) {
+                    left: 0px;
+                    top: 0px;
+                    display:block;
+                }
+                &:nth-child(2) {
+                    left: 251px;
+                    top: -50px;
+                    display:block;
+                }
+                &:nth-child(3) {
+                    left: 249px;
+                    top: 20px;
+                    display:block;
+                }
+            }
+            .netName {
+                width: 290px;
+                height: 35px;
+                color: #5e8fff;  
+                border: 1px solid #5e8fff;
+                font-size: 19px;
+                line-height: 35px;
+                text-align: center;
+                margin-top: 80px;
+            }
+        }
+    }
+}
+/**
+ * 主机设备性能Top5
+ */
+.host {
+    position: absolute;
+    top: 497px;
+    left: 0px;
+    height: 464px;
+    width: 1279px;
+    .head {
+        width: 210px;
+        height: 124px;
+        margin-top: 45px;
+        margin-left:98px;
+        margin-right:90px;
+        background: url(./../images/diskHost/hostLogo.png) no-repeat;
+        float:left;
+    }
+    .hostList {
+        li {
+            width: 400px;
+            height: 200px;
+            float: left;
+            margin-bottom:15px;
+            svg {
+                margin-left: 150px;
+            }
+        }
+        .node circle {
+            fill: rgb(31, 119, 180);
+            fill-opacity: 0;
+            stroke: rgb(31, 119, 180);
+            stroke-width: 0px;
+        }
+        .leaf circle {
+            fill: #528cff;
+            fill-opacity: 0.45;
+            stroke: #526eff;
+            stroke-width: 4px;
+        }
+        text {
+            font: 20px sans-serif;
+            text-anchor: middle;
+        }
+    }
+    .hostNameList {
+        li {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            &:nth-child(1) {
+                left: 450px;
+                top: 70px;
+            }
+            &:nth-child(2) {
+                left: 867px;
+                top: 70px;
+            }
+            &:nth-child(3) {
+                left: 52px;
+                top: 270px;
+            }
+            &:nth-child(4) {
+                left: 450px;
+                top: 270px;
+            }
+            &:nth-child(5) {
+                left: 867px;
+                top: 270px;
+            }
+            .text {
+                position: absolute;
+                display: none;
+                .name {
+                    font-size: 25px;
+                    color: #b1b1b1;
+                }
+                .value {
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: 25px;
+                }
+                &:nth-child(1) {
+                    left: 0px;
+                    top: 0px;
+                    display: block;
+                }
+                &:nth-child(2) {
+                    left: 251px;
+                    top: -50px;
+                    display: block;
+                }
+                &:nth-child(3) {
+                    left: 249px;
+                    top: 20px;
+                    display: block;
+                }
+            }
+            .hostName {
+                width: 290px;
+                height: 35px;
+                color: #5e8fff;  
+                border: 1px solid #5e8fff;
+                font-size: 19px;
+                line-height: 35px;
+                text-align: center;
+                margin-top: 80px;
+            }
+        }
+    }
+}

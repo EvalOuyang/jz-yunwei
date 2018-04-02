@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>运维监视系统</title>
+    <link rel="stylesheet" type="text/css" href="../styles/monitor.css">
+    <link rel="stylesheet" type="text/css" href="../styles/datePicker.css">
+</head>
+
+<body>
+    <!--页面左下角-->
+    <div class="leftBottom">
+        <div class="params-tittle">总队机房动环监测</div>
+        <div class="bars-tittle">各机房动环监测</div>
+        <!--左边四个环境参数-->
+        <div class="environment-params">
+        </div>
+        <!--温度柱状图-->
+        <div class="temperature-bar">
+            <svg>
+                <defs>
+                    <linearGradient id="normalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#5e8efe"></stop>
+                        <stop offset="100%" stop-color="#27478f"></stop>
+                    </linearGradient>
+                    <linearGradient id="alarmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#fc4343"></stop>
+                        <stop offset="100%" stop-color="#9c3556"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <!--湿度柱状图-->
+        <div class="humidity-bar">
+            <svg>
+                <defs>
+                    <linearGradient id="normalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#5e8efe"></stop>
+                        <stop offset="100%" stop-color="#27478f"></stop>
+                    </linearGradient>
+                    <linearGradient id="alarmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#fc4343"></stop>
+                        <stop offset="100%" stop-color="#9c3556"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <!--时间选择器-->
+        <div class="datePicker-container">
+            <div class="layui-form-pane">
+                <div class="layui-input-inline">
+                    <input class="layui-input start-time" placeholder="选择开始时间" id="LAY_demorange_s">
+                </div>
+
+                <div class="layui-input-inline">
+                    <input class="layui-input end-time" placeholder="选择结束时间" id="LAY_demorange_e">
+                </div>
+                <div class="date-line">--</div>
+                <div class="submit-btn"></div>
+
+                <div class="close-btn"></div>
+                <div class="date-container">
+
+                </div>
+                <div class="tip">请选择开始时间、结束时间！</div>
+            </div>
+        </div>
+        <!--时间轴交互后弹出的悬浮框-->
+        <div class="trend-container">
+            <div class="trend-title">总队三亚湾机房</div>
+            <div class="tempurature-trend-container">
+                <div id="tempurature-trend"></div>
+            </div>
+            <div class="humidity-trend-container">
+                <div id="humidity-trend"></div>
+            </div>
+            <div class="close-btn"></div>
+        </div>
+        <div class="datePicker-trigger"></div>
+    </div>
+
+    <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+    <script type="text/javascript" src='../sea-modules/sea.js'></script>
+    <script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+    <script type="text/javascript" src='../seajs.config.js'></script>
+    <script type="text/javascript" src='../plugin/layui/layui.js' charset="utf-8"></script>
+    <script type="text/javascript">
+        seajs.use(['../scripts/monitor/index.js', '../data/monitor/index.js'], function(home) {
+            home.init()
+        })
+    </script>
+</body>
+
+</html>

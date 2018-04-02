@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>运维监视系统</title>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/datePicker.css">
+</head>
+
+<body id="body">
+    <!--HTML结构开始-->
+    <!--页面中间部分-->
+    <div class="center">
+        <div class="tittle"></div>
+        <div class="ball-tittle">总队业务链路</div>
+        <!--柱状图、运行百分比曲线-->
+        <div class="branch-circles">
+            <!--<div class="currItem-bg"></div>-->
+            <svg height="100%" width="100%">
+                <defs>
+                    <filter id="GaussianBlur">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blurOut"/>
+                        <feMerge>
+                            <feMergeNode in="SourceGraphic"/>
+                            <feMergeNode in="blurOut"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <!-- 今日要情 -->
+        <div class="mergency">
+            <div class="title">紧急告警</div>
+            <marquee class="gundong-text" direction="left" scrollamount="10" onMouseOver="this.stop()" onMouseOut="this.start()">
+            </marquee>
+        </div>
+        <!--告警列表-->
+        <div class="alarm">
+            <div class="table-head">
+                <div>类型</div>
+                <div>告警数</div>
+            </div>
+            <ul class="alarm-list"></ul>
+            <div class="total-alarm"><span class="alarm-total-number"></span><span class="unit">条</span></div>
+        </div>
+        <!--链路机房-->
+        <div class="lianlu-routes">
+            <div class="total-route">
+                <div class="total-item">
+                    <div class="title">总流量(Gbps)</div>
+                    <div class="value"></div>
+                </div>
+                <div class="total-item">
+                    <div class="title">带宽占比</div>
+                    <div class="value"></div>
+                </div>
+                <div class="route-tittle">总队传输链路</div>
+
+            </div>
+            <div class="route-list"></div>
+        </div>
+        <!--主机运行负载分布-->
+        <div class="load-distribute">
+            <div class="load-tittle">主机CPU负载分布</div>
+            <div class="disk-tittle">硬盘使用率</div>
+            <div class="pie-container">
+                <svg height="460px" width="790px"></svg>
+            </div>
+        </div>
+        <!--时间选择器-->
+        <div class="datePicker-container">
+            <div class="layui-form-pane">
+                <div class="layui-input-inline">
+                    <input class="layui-input start-time" placeholder="选择开始时间" id="LAY_demorange_s">
+                </div>
+
+                <div class="layui-input-inline">
+                    <input class="layui-input end-time" placeholder="选择结束时间" id="LAY_demorange_e">
+                </div>
+                <div class="date-line">--</div>
+                <div class="submit-btn"></div>
+
+                <div class="close-btn"></div>
+                <div class="date-container">
+
+                </div>
+                <div class="tip">请选择开始时间、结束时间！</div>
+            </div>
+        </div>
+        <div class="datePicker-trigger"></div>
+    </div>
+
+    <!--HTML结构开始结束-->
+
+    <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+    <script type="text/javascript" src='../sea-modules/sea.js'></script>
+    <script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+    <script type="text/javascript" src='../seajs.config.js'></script>
+    <script type="text/javascript">
+        seajs.use(['../scripts/mainInterface/index.js', '../data/mainInterface/index.js'], function(home) {
+            home.init(true)
+        })
+    </script>
+</body>
+
+</html>

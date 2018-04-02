@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>重庆技侦运维大数据</title>
+    <link rel="stylesheet" type="text/css" href="../styles/troubleTable.css">
+    <link rel="stylesheet" type="text/css" href="../styles/datePicker.css">
+</head>
+
+<body>
+    <!-- HTML结构开始 -->
+    <div class="guzhang">
+
+        <!-- 故障概况 -->
+        <div class="faultProfile">
+        </div>
+        <!-- 故障类型 -->
+        <div class="faultType">
+            <div class="chart">
+                <div class="text">故障占比</div>
+                <div class="pieWpper">
+                    <div class="pie" id="pie"></div>
+                </div>
+            </div>
+            <div class="list" id="list">
+                <ul class="percent">
+                    <li class="frontEndPercent"></li>
+                    <li class="systemPercent"></li>
+                </ul>
+                <ul class="total">
+                    <li class="frontEnd">
+                        <div class="name">前台维护(条)</div>
+                        <div class="value" id="FrontEndValue"></div>
+                    </li>
+                    <li class="system">
+                        <div class="name">系统维护(条)</div>
+                        <div class="value" id="systemValue"></div>
+                    </li>
+                </ul>
+                <ul class="typeList">
+                </ul>
+                <ul class="systemList">
+                </ul>
+            </div>
+        </div>
+        <!-- 有新的故障 -->
+        <div class="newFault">
+        </div>
+        <!-- 各支队故障 -->
+        <div class="detachFault">
+
+        </div>
+        <!--时间选择器-->
+        <div class="datePicker-container">
+            <div class="layui-form-pane">
+                <div class="layui-input-inline">
+                    <input class="layui-input start-time" placeholder="选择开始时间" id="LAY_demorange_s">
+                </div>
+
+                <div class="layui-input-inline">
+                    <input class="layui-input end-time" placeholder="选择结束时间" id="LAY_demorange_e">
+                </div>
+                <div class="date-line">--</div>
+                <div class="submit-btn"></div>
+
+                <div class="close-btn"></div>
+                <div class="date-container">
+
+                </div>
+                <div class="tip">请选择开始时间、结束时间！</div>
+            </div>
+        </div>
+        <div class="datePicker-trigger"></div>
+    </div>
+    <!-- HTML结构开始结束 -->
+    <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+    <script type="text/javascript" src='../sea-modules/sea.js'></script>
+    <script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+    <script type="text/javascript" src='../seajs.config.js'></script>
+    <script type="text/javascript">
+        seajs.use(['../scripts/troubleTable/index', '../data/troubleTable/index'], function(index) {
+            index.init()
+        })
+    </script>
+</body>
+
+</html>

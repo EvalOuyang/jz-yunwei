@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>运维监视系统</title>
+    <link rel="stylesheet" type="text/css" href="./plugin/fullpage/css/jquery.fullPage.css">
+    <script type="text/javascript" src='./sea-modules/jquery.min.js'></script>
+    <script type="text/javascript" src='./sea-modules/sea.js'></script>
+    <script type="text/javascript" src='./plugin/fullpage/js/jquery-ui-1.10.3.min.js'></script>
+    <script type="text/javascript" src='./plugin/fullpage/js/jquery.fullPage.min.js'></script>
+    <script type="text/javascript" src='./scripts/util/util.js'></script>
+    <style type="text/css">
+        iframe {
+            transform-origin: 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullPage">
+        <div class="section">
+            <iframe id="main" frameborder="0" src="./pages/main.html">
+            </iframe>
+        </div>
+        <div class="section">
+            <iframe id="cipan" frameborder="0" src="./pages/cipan.html">
+            </iframe>
+        </div>
+        <div class="section">
+            <iframe id="donghuan" frameborder="0" src="./pages/donghuan.html">
+            </iframe>
+        </div>
+
+        <div class="section">
+            <iframe id="guzhang" frameborder="0" src="./pages/guzhang.html">
+            </iframe>
+        </div>
+    </div>
+    <ul class="menu">
+        <li class="" data-menuanchor="page1"><a href="#page1" title="主界面">主界面</a></li>
+        <li data-menuanchor="page2"><a href="#page2" title="磁盘主机">磁盘主机</a></li>
+        <li data-menuanchor="page3"><a href="#page3" title="动环监测">动环监测</a></li>
+        <li data-menuanchor="page4"><a href="#page4" title="故障台">故障台</a></li>
+    </ul>
+    <script type="text/javascript">
+        var height = window.innerHeight
+        var width = window.innerWidth
+        $('iframe').attr({
+            'height': height + 'px',
+            'width': width + 'px'
+        })
+        $(function() {
+            $('#fullPage').fullpage({
+                'verticalCentered': false,
+                'css3': true,
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                menu: '.menu',
+                scrollingSpeed: 500
+            });
+            $('.menu').mouseenter(function(e) {
+                $('.menu').css('right', 0)
+            })
+            $('.menu').mouseleave(function(event) {
+                $('.menu').css('right', -230)
+
+            });
+        });
+        window.onresize = function() {
+            //计算缩放比例，initWidth,initHeight表示窗口变化后的宽高，width,height表示变化前的宽高
+            var initHeight = window.innerHeight
+            var initWidth = window.innerWidth
+            var x = initWidth / width
+            var y = initHeight / height
+
+            //设置iframe标签的绽放值
+            $('iframe').css('webkitTransform', 'scale(' + x + ',' + y + ')')
+            $('iframe').css('msTransform', 'scale(' + x + ',' + y + ')')
+            $('iframe').css('mozTransform', 'scale(' + x + ',' + y + ')')
+            $('iframe').css('oTransform', 'scale(' + x + ',' + y + ')')
+        }
+    </script>
+</body>
+
+</html>

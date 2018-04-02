@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+	list-style: none;
+}
+html {
+	height: 100%;
+	body {
+		background: url(./../images/troubleTable/bg.png) no-repeat;
+		background-size: 100% 100%;
+		overflow: hidden;
+		transform-origin: 0 0 0;
+		-moz-user-select: -moz-none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+/**
+ * 故障概况
+ */
+.faultProfile {
+	width: 480px;
+	position: absolute;
+	top: 72px;
+	left: 80px;
+	h4 {
+		height: 33px;
+		line-height: 33px;
+		font-size: 30px;
+		color: #82b7ff;
+	}
+	ul {
+        li {
+        	float: left;
+        	height: 180px;
+        	width: 234px;
+        	padding-top: 10px;
+        	.name {
+        		font-size: 34px;
+        		line-height: 72px;
+        		color: #b1b1b1;
+        	}
+        	.value {
+        		font-size: 45px;
+        		color: #fff;
+        	}
+        }
+	}
+}
+/**
+ * 故障类型
+ */
+.faultType {
+    width: 754px;
+    height: 831px;
+    position: absolute;
+	top: 58px;
+	left: 580px;
+	background: url(./../images/troubleTable/faultTypeBg.png) no-repeat;
+	.percent {
+		width: 750px;
+		height: 100px;
+		position: absolute;
+		left: 0px;
+		top: -85px;
+		li {
+			font-size: 50px;
+			color: #46aefe;
+		}
+		.frontEndPercent {
+			float: right;
+			padding-right: 10px;
+		}
+		.systemPercent {
+			float: left;
+			padding-left: 10px;
+		}
+	}
+	.chart {
+		float: left;
+		margin-left: 200px;
+		width: 340px;
+		height: 340px;
+		background: url(./../images/troubleTable/pieBg.png) no-repeat 92px 67px;
+		.text {
+            position: relative;
+            top: 129px;
+            left: 8px;
+            font-size: 32px;
+            height: 40px;
+            color: #5e8fff;
+            line-height: 40px;
+            width: 340px;
+            text-align: center;
+		}
+		.pieWpper {
+			position: relative;
+			top: -90px;
+            left: -25px;
+            z-index: 100;
+	        .pie {
+		    	position: relative;
+				width: 400px;
+				height: 400px;
+			}
+		}
+	}
+	.list {
+		float: left;
+		width: 725px;
+		position: absolute;
+		top: 120px;
+		left: 0px;
+		padding: 0 10px;
+		.total {
+			height: 170px;
+			.frontEnd {
+				width: 200px;
+				height: 137px;
+				float: right;
+				color: #fff;
+				.name {
+                    font-size: 30px;
+					line-height: 70px;
+					text-align: right;
+				}
+				.value {
+                    font-size: 60px;
+                    line-height: 70px;
+                    text-align: right;
+				}
+			}
+			.system {
+				width: 200px;
+				height: 137px;
+				float: left;
+				color: #fff;
+				.name {
+                    font-size: 30px;
+					line-height: 70px;
+					text-align: left;
+				}
+				.value {
+                    font-size: 60px;
+                    line-height: 70px;
+                    text-align: left;
+				}
+			}
+		}
+	    .typeList {
+			width: 350px;
+			height: 300px;
+			padding-top: 32px;
+			float: right;
+			position: relative;
+            left: 5px;
+			li {
+                height: 60px;
+                width: 175px;
+                background: url(./../images/troubleTable/typeListLiBg.png) no-repeat;
+                padding-bottom: 14px;
+                float: left;
+                .name {
+                    font-size: 23px;
+                    color: #5e8fff;
+                    line-height: 25px;
+                    text-indent: 10px;
+                    overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+                }
+                .value {
+                	font-size: 25px;
+                    color: #fff;
+                    line-height: 35px;
+                    height: 35px;
+                    text-indent: 10px;
+                }
+			}
+		}
+		.systemList {
+			width: 350px;
+			height: 300px;
+			float: left;
+			padding-top: 32px;
+			li {
+                height: 60px;
+                width: 116px;
+                background: url(./../images/troubleTable/typeListLiBg.png) no-repeat;
+                padding-bottom: 13px;
+                float: left;
+                .name {
+                    font-size: 23px;
+                    color: #5e8fff;
+                    line-height: 25px;
+                    text-indent: 10px;
+                    overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+                }
+                .value {
+                	font-size: 25px;
+                    color: #fff;
+                    line-height: 35px;
+                    height: 35px;
+                    text-indent: 10px;
+                }
+			}
+		}
+	}
+}
+/**
+ * 有新的故障
+ */
+ .newFault {
+ 	width: 400px;
+    height: 400px;
+    position: absolute;
+	top: 450px;
+	left: 80px;
+	.head {
+		margin-top: 40px;
+		height: 71px;
+		line-height: 71px;
+		font-size: 36px;
+		color: #fb4343;
+		text-indent: 65px;
+		background: url(./../images/troubleTable/newFaultTitle.png) no-repeat 0 22px;
+	}
+	.text {
+		height: 310px;
+		line-height: 127px;
+		background: url(./../images/troubleTable/newFaultText.png) no-repeat;
+		background-size: 100% 100%;
+		margin-top: 10px;
+		.title {
+			height: 67px;
+			line-height: 67px;
+			font-size: 34px;
+			color: #fff;
+			background: url(./../images/troubleTable/newFaultHead.png) no-repeat 32px 31px;
+			text-indent: 67px;
+		}
+		.falut {
+			height: 57px;
+			line-height: 57px;
+			font-size: 26px;
+			color: #fff;
+			text-indent: 47px;
+	        width: 330px;
+			margin: 0 auto;
+			p {
+				white-space: normal;
+				width: 400px; 
+				margin-top: 20px;
+			}
+		}
+	}
+	.str_move { 
+		white-space:nowrap;
+		position:absolute; 
+		top:0; 
+		left:0;
+		cursor:move;
+	}
+	.str_wrap {
+		overflow:hidden;
+		width:100%;
+		font-size:12px;
+		line-height:16px;
+		position:relative;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		user-select: none;  
+		white-space:nowrap;
+	}
+}
+/**
+ * 各支队故障
+ */
+ .detachFault {
+ 	width: 960px;
+    height: 807px;
+    position: absolute;
+	top: 72px;
+	left: 1450px;
+	overflow: hidden;
+	h4 {
+		height: 30px;
+		font-size: 30px;
+		color: #82b7ff;
+		margin-bottom: 30px;
+	}
+	.content {
+		width: 955px;
+		height: 745px;
+		background: url(./../images/troubleTable/detachFaultBg.png) no-repeat;
+		background-size: 100% 746px;
+		position: absolute;
+		.tab_box {
+			height: 610px;
+			.box {
+				width: 955px;
+				height: 1000px;
+	            li {
+	            	width: 270px;
+	            	height: 270px;
+	            	float: left;
+	            	margin: 30px 5px 5px 30px;
+	            	border: 2px solid #4e63b7;
+	            	border-radius: 10px;
+	            	background: url(./../images/troubleTable/liBg.png) no-repeat  10px 10px;
+	            	.title {
+	            		height: 56px;
+	            		font-size: 28px;
+	            		color: #fefefe;
+	            		line-height: 56px;
+	            		margin: 10px 10px 0 10px;
+	            		background: url(./../images/troubleTable/liHead.png) no-repeat;
+	            		background-size: 100% 100%;
+	            		text-indent: 3px;
+	            		border-bottom: 6px #031533 solid;
+	            		overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: block;
+                        white-space: nowrap;
+	            	}
+	            	.total {
+	            		height: 80px;
+	            		line-height: 90px;
+	            		font-size: 60px;
+	            		text-align: center;
+	            		color: #fff;
+	            	}
+	            	.totalText {
+	            		height: 25px;
+	            		line-height: 25px;
+	            		text-align: center;
+	            		font-size: 25px;
+	            		color: #fff;
+	            	}
+	            	.chart {
+	            		height: 77px;
+		                .noDeal {
+		            		float: left;
+		            		width: 90px;
+		            		height: 26px;
+		            		line-height: 26px;
+		            		padding-top: 53px;
+		            		font-size: 26px;
+		            		text-align: right;
+		            		color: #527bff;
+		            	}
+		            	.bar {
+		            		float: left;
+		            		width: 90px;
+		            		height: 80px;
+		            		position: relative;
+		                    .noDealBar {
+			            		float: left;
+			            		width: 32px;
+			            		background: #ffac1b;
+			            		position: absolute;
+			            		bottom: 0;
+			            		left: 10px;
+			            	}
+			            	.arDealBar {
+			            		float: left;
+			            		width: 32px;
+			            		background: #527bff;
+			            		position: absolute;
+			            		bottom: 0;
+			            		left: 50px;
+			            	}
+		            	}
+		            	.arDeal {
+		            		float: left;
+		            		width: 90px;
+		            		height: 26px;
+		            		line-height: 26px;
+		            		padding-top: 53px;
+		            		font-size: 26px;
+		            		text-align: left;
+		            		color: #527bff;
+		            	}
+	            	}
+	            }
+			}
+		}
+		.tab_menu {
+            width: 290px;
+            height: 32px;
+            position: absolute;
+            top: 690px;
+            left: 652px;
+            li {
+            	width: 25px;
+            	cursor: pointer;
+            	height: 25px;
+            	background: red;
+            	float: left;
+            	margin-right: 16px;
+            	background: url(./../images/troubleTable/nav.png) no-repeat;
+            }
+            .current {
+            	background: url(./../images/troubleTable/navCur.png) no-repeat;
+            }
+		}
+		.Legend {
+			width: 340px;
+			height: 25px;
+			position: absolute;
+            top: 685px;
+            left: 32px;
+			li {
+				width: 170px;
+				float: left;
+				div {
+					float: left;
+					font-size: 26px;
+					color: #c5d3ff;
+					line-height: 26px;
+				}
+				.noDealBar {
+					width: 36px;
+					height: 24px;
+					background: #ffac1b;
+					margin-right: 10px;
+					margin-top: 3px;
+				}
+				.arDealBar {
+					width: 36px;
+					height: 24px;
+					background: #527bff;
+					margin-right: 10px;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+}

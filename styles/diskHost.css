@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+html body {
+    overflow: hidden;
+    transform-origin: 0 0 0;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.disk {
+    background: url(../images/diskHost/bg.png) no-repeat 0 0/100% 100%;
+    position: absolute;
+    width: 2475px;
+    height: 1856px;
+    top: 0;
+    left: 0;
+}
+
+
+/**
+ * 磁盘状态
+ */
+
+.diskStatus {
+    position: absolute;
+    top: 46px;
+    left: 1280px;
+    width: 455px;
+    height: 276px;
+}
+
+.diskStatus h2 {
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #82b7ff;
+}
+
+.diskStatus .diskInfo {
+    width: 500px;
+    height: 220px;
+    float: left;
+    background: url(../images/diskHost/diskInfoBg.png) no-repeat 0 0/100% 100%;
+}
+
+.diskStatus .diskInfo .chart {
+    width: 284px;
+    float: left;
+    padding-left: 24px;
+}
+
+.diskStatus .diskInfo .chart h3 {
+    height: 66px;
+    line-height: 66px;
+    font-size: 30px;
+    color: #5e8fff;
+}
+
+.diskStatus .diskInfo .chart h3 span {
+    color: #fff;
+}
+
+.diskStatus .diskInfo .chart ul {
+    width: 280px;
+    height: 131px;
+    border: 2px solid #5e8fff;
+    border-radius: 4px;
+}
+
+.diskStatus .diskInfo .chart ul li {
+    width: 26px;
+    height: 11px;
+    background: #5e8fff;
+    border-radius: 2px;
+    float: left;
+    margin: 1px;
+}
+
+.diskStatus .diskInfo .chart ul .broken {
+    background: #fb4343;
+}
+
+.diskStatus .diskInfo .chart ul .willBroken {
+    background: #eb9602;
+}
+
+.diskStatus .diskInfo .share {
+    float: left;
+    height: 220px;
+    margin-left: 35px;
+}
+
+.diskStatus .diskInfo .share li {
+    margin-top: 8px;
+}
+
+.diskStatus .diskInfo .share li.id1 {
+    list-style-type: disc;
+    color: #eb9602;
+}
+
+.diskStatus .diskInfo .share li.id1 .name {
+    font-size: 26px;
+    line-height: 30px;
+    color: #eb9602;
+}
+
+.diskStatus .diskInfo .share li.id2 {
+    list-style-type: disc;
+    color: #f44647;
+}
+
+.diskStatus .diskInfo .share li.id2 .name {
+    font-size: 26px;
+    line-height: 30px;
+    color: #f44647;
+}
+
+.diskStatus .diskInfo .share li.id3 {
+    list-style-type: disc;
+    color: #5e8fff;
+}
+
+.diskStatus .diskInfo .share li.id3 .name {
+    font-size: 26px;
+    line-height: 30px;
+    color: #5e8fff;
+}
+
+.diskStatus .diskInfo .share div {
+    font-size: 22px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.diskStatus .diskInfo .share .value {
+    float: left;
+    width: 70px;
+    text-align: left;
+}
+
+.diskStatus .diskInfo .share .percent {
+    float: left;
+    width: 70px;
+    text-align: right;
+}
+
+
+/**
+ * 磁盘告警列表
+ */
+
+.alarmList {
+    position: absolute;
+    top: 93px;
+    left: 1794px;
+    height: 230px;
+    width: 644px;
+}
+
+.alarmList li {
+    position: relative;
+    height: 46px;
+    line-height: 46px;
+    font-size: 24px;
+    color: #b1b1b1;
+}
+
+.alarmList li:first-child {
+    color: #fff;
+    background: url(../images/diskHost/alarmListHover.png) no-repeat;
+}
+
+.alarmList .title {
+    float: left;
+    padding-left: 16px;
+    width: 625px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.alarmList .time {
+    float: right;
+    padding-right: 16px;
+    display: none;
+}
+
+
+/**
+ * 磁盘故障历史
+ */
+
+.faultHistory {
+    position: absolute;
+    top: 369px;
+    left: 1281px;
+    height: 518px;
+    width: 1111px;
+    background: url(../images/diskHost/faultHistoryBg.png) no-repeat;
+}
+
+.faultHistory h2 {
+    font-size: 32px;
+    color: #82b7ff;
+    margin-top: 26px;
+    padding-left: 94px;
+}
+
+.faultHistory .total {
+    width: 300px;
+    height: 100px;
+    margin-left: 400px;
+}
+
+.faultHistory .total .name {
+    font-size: 28px;
+    color: #82b7ff;
+    text-align: center;
+    line-height: 40px;
+}
+
+.faultHistory .total .amount {
+    font-size: 33px;
+    color: #ffac1b;
+    text-align: center;
+    line-height: 53px;
+}
+
+.faultHistory .pie {
+    width: 300px;
+    height: 300px;
+    margin-left: 409px;
+    margin-top: 45px;
+    position: absolute;
+}
+
+.faultHistory .list li {
+    width: 316px;
+    height: 130px;
+}
+
+.faultHistory .list li p {
+    position: relative;
+    font-size: 21px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 170px;
+    color: #fff;
+    text-indent: 10px;
+}
+
+.faultHistory .list li p.percent:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 170px;
+    height: 20px;
+    width: 5px;
+    background: #3152fd;
+}
+
+.faultHistory .list li p.guzhang-total:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 170px;
+    height: 20px;
+    width: 5px;
+    background: #3152fd;
+}
+
+.faultHistory .list li p.notRepair {
+    text-indent: 0;
+    padding-left: 170px;
+    color: #0d234e;
+}
+
+.faultHistory .list li p.notRepair .title {
+    background: #fb4343;
+    padding: 0 5px;
+}
+
+.faultHistory .list li p.notRepair .value {
+    padding-left: 10px;
+    color: #fb4343;
+}
+
+.faultHistory .list li p.willAlarm {
+    text-indent: 0;
+    padding-left: 170px;
+    color: #0d234e;
+}
+
+.faultHistory .list li p.willAlarm .title {
+    background: #eb9602;
+    padding: 0 6px;
+}
+
+.faultHistory .list li p.willAlarm .value {
+    padding-left: 10px;
+    color: #ffac1b;
+}
+
+.faultHistory .list li:nth-child(1) {
+    position: absolute;
+    left: 45px;
+    top: 152px;
+    background: url(../images/diskHost/sugon.png) no-repeat 0 0/100% 100%;
+}
+
+.faultHistory .list li:nth-child(2) {
+    position: absolute;
+    left: 45px;
+    top: 300px;
+    background: url(../images/diskHost/langchao.png) no-repeat 0 0/100% 100%;
+}
+
+.faultHistory .list li:nth-child(3) {
+    position: absolute;
+    left: 745px;
+    top: 154px;
+    background: url(../images/diskHost/IBM.png) no-repeat 0 0/100% 100%;
+}
+
+.faultHistory .list li:nth-child(4) {
+    position: absolute;
+    left: 745px;
+    top: 300px;
+    background: url(../images/diskHost/huawei.png) no-repeat 0 0/100% 100%;
+}
+
+
+/**
+ * 网络设备性能Top5
+ */
+
+.network {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 464px;
+    width: 1279px;
+    padding-top: 45px;
+}
+
+.network .head {
+    width: 210px;
+    height: 124px;
+    margin-top: 45px;
+    margin-left: 98px;
+    margin-right: 93px;
+    background: url(../images/diskHost/networkLogo.png) no-repeat;
+    float: left;
+}
+
+.network .networkList li {
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin-bottom: 0px;
+}
+
+.network .networkList li .rada {
+    width: 300px;
+    height: 200px;
+    margin-left: 60px;
+}
+
+.network .nameList li {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+}
+
+.network .nameList li:nth-child(1) {
+    left: 450px;
+    top: 135px;
+}
+
+.network .nameList li:nth-child(2) {
+    left: 867px;
+    top: 135px;
+}
+
+.network .nameList li:nth-child(3) {
+    left: 52px;
+    top: 340px;
+}
+
+.network .nameList li:nth-child(4) {
+    left: 450px;
+    top: 340px;
+}
+
+.network .nameList li:nth-child(5) {
+    left: 867px;
+    top: 340px;
+}
+
+.network .nameList li .text {
+    position: absolute;
+    display: none;
+}
+
+.network .nameList li .text .name {
+    font-size: 25px;
+    color: #b1b1b1;
+}
+
+.network .nameList li .text .value {
+    font-size: 20px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.network .nameList li .text:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    display: block;
+}
+
+.network .nameList li .text:nth-child(2) {
+    left: 251px;
+    top: -50px;
+    display: block;
+}
+
+.network .nameList li .text:nth-child(3) {
+    left: 249px;
+    top: 20px;
+    display: block;
+}
+
+.network .nameList li .netName {
+    width: 290px;
+    height: 40px;
+    color: #5e8fff;
+    border: 1px solid #5e8fff;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/**
+ * 主机设备性能Top5
+ */
+
+.host {
+    position: absolute;
+    top: 497px;
+    left: 0px;
+    height: 464px;
+    width: 1279px;
+}
+
+.host .head {
+    width: 210px;
+    height: 124px;
+    margin-top: 45px;
+    margin-left: 98px;
+    margin-right: 90px;
+    background: url(../images/diskHost/hostLogo.png) no-repeat;
+    float: left;
+}
+
+.host .hostList li {
+    width: 400px;
+    height: 200px;
+    float: left;
+    /*margin-bottom: 15px;*/
+}
+
+.host .hostList li svg {
+    margin-left: 120px;
+    /*margin-top: 30px;*/
+}
+
+.host .hostList .node circle {
+    fill: #1f77b4;
+    fill-opacity: 0;
+    stroke: #1f77b4;
+    stroke-width: 0px;
+}
+
+.host .hostList .leaf circle {
+    fill: #528cff;
+    fill-opacity: 0.45;
+    stroke: #526eff;
+    stroke-width: 4px;
+}
+
+.host .hostList text {
+    font: 20px sans-serif;
+    text-anchor: middle;
+}
+
+.host .hostNameList li {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+}
+
+.host .hostNameList li:nth-child(1) {
+    left: 450px;
+    top: 70px;
+}
+
+.host .hostNameList li:nth-child(2) {
+    left: 867px;
+    top: 70px;
+}
+
+.host .hostNameList li:nth-child(3) {
+    left: 52px;
+    top: 270px;
+}
+
+.host .hostNameList li:nth-child(4) {
+    left: 450px;
+    top: 270px;
+}
+
+.host .hostNameList li:nth-child(5) {
+    left: 867px;
+    top: 270px;
+}
+
+.host .hostNameList li .text {
+    position: absolute;
+    display: none;
+}
+
+.host .hostNameList li .text .name {
+    font-size: 25px;
+    color: #b1b1b1;
+}
+
+.host .hostNameList li .text .value {
+    font-size: 20px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.host .hostNameList li .text:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    display: block;
+}
+
+.host .hostNameList li .text:nth-child(2) {
+    left: 251px;
+    top: -50px;
+    display: block;
+}
+
+.host .hostNameList li .text:nth-child(3) {
+    left: 249px;
+    top: 20px;
+    display: block;
+}
+
+.host .hostNameList li .deviceInfo {
+    width: 290px;
+    height: 40px;
+    color: #5e8fff;
+    border: 1px solid #5e8fff;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/***************************提示框样式***********************/
+
+.tooltip {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    font-family: simsum;
+    font-size: 20px;
+    line-height: 26px;
+    color: white;
+    text-align: left;
+    background-color: #3471fd;
+    opacity: .9;
+    border: 1px solid #7fedf5;
+    border-radius: 15px;
+    padding: 8px;
+    font-family: 微软雅黑;
+    z-index: 6;
+    white-space: normal;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #7fedf5;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+
+.datePicker-trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 100px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>重庆技侦运维大数据</title>
+    <link rel="stylesheet" type="text/css" href="../styles/diskHost.css">
+    <link rel="stylesheet" type="text/css" href="../styles/datePicker.css">
+</head>
+
+<body>
+    <div class="disk">
+        <!-- 磁盘状态 -->
+        <div class="diskStatus">
+        </div>
+        <!-- 磁盘告警列表 -->
+        <div class="alarmList">
+        </div>
+        <!-- 磁盘故障历史 -->
+        <div class="faultHistory">
+            <h2>磁盘故障统计</h2>
+            <div class="total">
+                <p class="name">故障磁盘（块）</p>
+                <p class="amount"></p>
+            </div>
+            <div class="pie" id="pie"></div>
+            <ul class="list">
+            </ul>
+        </div>
+        <!-- 网络设备性能TOP5 -->
+        <div class="network">
+            <div class="head"></div>
+            <ul class="networkList">
+                <li>
+                    <div class="rada" id="rada1"></div>
+                </li>
+                <li>
+                    <div class="rada" id="rada2"></div>
+                </li>
+                <li>
+                    <div class="rada" id="rada3"></div>
+                </li>
+                <li>
+                    <div class="rada" id="rada4"></div>
+                </li>
+                <li>
+                    <div class="rada" id="rada5"></div>
+                </li>
+            </ul>
+            <ul class="nameList">
+            </ul>
+        </div>
+        <!-- 主机设备性能TOP5 -->
+        <div class="host">
+            <div class="head"></div>
+            <ul class="hostList">
+                <li>
+                    <svg id="tangent1" width="150" height="150"></svg>
+                </li>
+                <li>
+                    <svg id="tangent2" width="150" height="150"></svg>
+                </li>
+                <li>
+                    <svg id="tangent3" width="150" height="150"></svg>
+                </li>
+                <li>
+                    <svg id="tangent4" width="150" height="150"></svg>
+                </li>
+                <li>
+                    <svg id="tangent5" width="150" height="150"></svg>
+                </li>
+            </ul>
+            <ul class="hostNameList">
+            </ul>
+        </div>
+        <!--时间选择器-->
+        <div class="datePicker-container">
+            <div class="layui-form-pane">
+                <div class="layui-input-inline">
+                    <input class="layui-input start-time" placeholder="选择开始时间" id="LAY_demorange_s">
+                </div>
+
+                <div class="layui-input-inline">
+                    <input class="layui-input end-time" placeholder="选择结束时间" id="LAY_demorange_e">
+                </div>
+                <div class="date-line">--</div>
+                <div class="submit-btn"></div>
+
+                <div class="close-btn"></div>
+                <div class="date-container">
+
+                </div>
+                <div class="tip">请选择开始时间、结束时间！</div>
+            </div>
+        </div>
+        <div class="datePicker-trigger"></div>
+    </div>
+    <!--HTML结构开始结束-->
+
+    <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+    <script type="text/javascript" src='../sea-modules/sea.js'></script>
+    <script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+    <script type="text/javascript" src='../seajs.config.js'></script>
+    <script type="text/javascript">
+        seajs.use(['../scripts/diskHost/index', '../data/diskHost/index'], function(index) {
+            index.init()
+        })
+    </script>
+</body>
+
+</html>

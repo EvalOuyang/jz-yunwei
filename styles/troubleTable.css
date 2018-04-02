@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+html body {
+    overflow: hidden;
+    transform-origin: 0 0 0;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Microsoft YaHei';
+}
+
+.guzhang {
+    background: url(../images/troubleTable/bg.png) no-repeat 0 0/100% 100%;
+    position: absolute;
+    width: 2475px;
+    height: 928px;
+    top: 0;
+    left: 0;
+}
+
+
+/**
+* 故障概况
+*/
+
+.faultProfile {
+    width: 480px;
+    position: absolute;
+    top: 72px;
+    left: 80px;
+}
+
+.faultProfile h4 {
+    font-family: 'Microsoft YaHei';
+    height: 33px;
+    line-height: 33px;
+    font-size: 30px;
+    color: #82b7ff;
+}
+
+.faultProfile ul li {
+    float: left;
+    height: 180px;
+    width: 234px;
+    padding-top: 10px;
+}
+
+.faultProfile ul li .name {
+    font-size: 34px;
+    line-height: 72px;
+    color: #b1b1b1;
+}
+
+.faultProfile ul li .value {
+    font-size: 45px;
+    color: #fff;
+}
+
+
+/**
+* 故障类型
+*/
+
+.faultType {
+    width: 754px;
+    height: 831px;
+    position: absolute;
+    top: 58px;
+    left: 580px;
+    background: url(../images/troubleTable/faultTypeBg.png) no-repeat;
+}
+
+.faultType .percent {
+    width: 750px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: -85px;
+}
+
+.faultType .percent li {
+    font-size: 50px;
+    color: #46aefe;
+}
+
+.faultType .percent .frontEndPercent {
+    float: right;
+    padding-right: 10px;
+}
+
+.faultType .percent .systemPercent {
+    float: left;
+    padding-left: 10px;
+}
+
+.faultType .chart {
+    float: left;
+    margin-left: 200px;
+    width: 340px;
+    height: 340px;
+    background: url(../images/troubleTable/pieBg.png) no-repeat 92px 67px;
+}
+
+.faultType .chart .text {
+    position: relative;
+    top: 129px;
+    left: 8px;
+    font-size: 32px;
+    height: 40px;
+    color: #5e8fff;
+    line-height: 40px;
+    width: 340px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.faultType .chart .pieWpper {
+    position: relative;
+    top: -90px;
+    left: -25px;
+    z-index: 100;
+}
+
+.faultType .chart .pieWpper .pie {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.faultType .list {
+    float: left;
+    width: 725px;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    padding: 0 10px;
+}
+
+.faultType .list .total {
+    height: 170px;
+}
+
+.faultType .list .total .frontEnd {
+    width: 200px;
+    height: 137px;
+    float: right;
+    color: #fff;
+}
+
+.faultType .list .total .frontEnd .name {
+    font-size: 30px;
+    line-height: 70px;
+    text-align: right;
+}
+
+.faultType .list .total .frontEnd .value {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: right;
+}
+
+.faultType .list .total .system {
+    width: 200px;
+    height: 137px;
+    float: left;
+    color: #fff;
+}
+
+.faultType .list .total .system .name {
+    font-size: 30px;
+    line-height: 70px;
+    text-align: left;
+}
+
+.faultType .list .total .system .value {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: left;
+}
+
+.faultType .list .typeList {
+    width: 360px;
+    height: 393px;
+    padding-top: 32px;
+    float: right;
+    position: relative;
+    left: 5px;
+    overflow-y:auto;
+    margin-right: -10px;
+}
+
+.faultType .list .typeList li {
+    height: 60px;
+    width: 170px;
+    background: url(../images/troubleTable/typeListLiBg.png) no-repeat;
+    padding-bottom: 14px;
+    float: left;
+}
+
+.faultType .list .typeList li .name {
+    font-size: 23px;
+    color: #5e8fff;
+    line-height: 25px;
+    text-indent: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.faultType .list .typeList li .value {
+    font-size: 25px;
+    color: #fff;
+    line-height: 35px;
+    height: 35px;
+    text-indent: 10px;
+}
+
+.faultType .list .systemList {
+    width: 360px;
+    height: 500px;
+    float: left;
+    padding-top: 32px;
+    overflow-y: auto;
+}
+
+.faultType .list .systemList li {
+    position: relative;
+    height: 60px;
+    width: 170px;
+    background: url(../images/troubleTable/typeListLiBg.png) no-repeat;
+    padding-bottom: 13px;
+    float: left;
+}
+
+.faultType .list .systemList li .name {
+    font-size: 23px;
+    color: #527bff;
+    line-height: 25px;
+    text-indent: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.faultType .list .systemList li .value {
+    font-size: 25px;
+    color: #fff;
+    line-height: 35px;
+    height: 35px;
+    text-indent: 10px;
+}
+
+
+/**
+* 有新的故障
+*/
+
+.newFault {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 450px;
+    left: 80px;
+}
+
+.newFault .head {
+    margin-top: 40px;
+    height: 71px;
+    line-height: 71px;
+    font-size: 36px;
+    color: #fb4343;
+    text-indent: 65px;
+    background: url(../images/troubleTable/newFaultTitle.png) no-repeat 0 22px;
+}
+
+.newFault .text {
+    height: 310px;
+    line-height: 127px;
+    background: url(../images/troubleTable/newFaultText.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 10px;
+}
+
+.newFault .text .title {
+    height: 67px;
+    line-height: 67px;
+    font-size: 34px;
+    color: #fff;
+    background: url(../images/troubleTable/newFaultHead.png) no-repeat 32px 31px;
+    text-indent: 67px;
+}
+
+.newFault .text .falut {
+    height: 100%;
+    line-height: 57px;
+    font-size: 26px;
+    color: #fff;
+    text-indent: 47px;
+    width: 330px;
+    margin: 0 auto;
+}
+
+.newFault .text .falut p {
+    white-space: normal;
+    width: 330px;
+    margin-top: 20px;
+}
+
+.newFault .str_move {
+    white-space: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: move;
+}
+
+.newFault .str_wrap {
+    overflow: hidden;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+
+/**
+* 各支队故障
+*/
+
+.detachFault {
+    width: 960px;
+    height: 807px;
+    position: absolute;
+    top: 72px;
+    left: 1450px;
+    overflow: hidden;
+}
+
+.detachFault h4 {
+    font-family: 'Microsoft YaHei';
+    height: 30px;
+    font-size: 30px;
+    color: #82b7ff;
+    margin-bottom: 30px;
+}
+
+.detachFault .content {
+    width: 955px;
+    height: 745px;
+    background: url(../images/troubleTable/detachFaultBg.png) no-repeat;
+    background-size: 100% 746px;
+    position: absolute;
+}
+
+.detachFault .content .tab_box {
+    height: 610px;
+}
+
+.detachFault .content .tab_box .box {
+    width: 955px;
+    height: 1000px;
+}
+
+.detachFault .content .tab_box .box li {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    float: left;
+    margin: 30px 5px 5px 30px;
+    border: 2px solid #4e63b7;
+    border-radius: 10px;
+    background: url(../images/troubleTable/liBg.png) no-repeat 10px 10px;
+}
+
+.detachFault .content .tab_box .box li .title {
+    position: relative;
+    height: 40px;
+    font-size: 20px;
+    color: #fefefe;
+    line-height: 40px;
+    margin: 10px 10px 0 10px;
+    background: url(../images/troubleTable/liHead.png) no-repeat;
+    background-size: 100% 100%;
+    text-indent: 3px;
+    border-bottom: 6px #031533 solid;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+}
+
+.detachFault .content .tab_box .box li .total {
+    height: 80px;
+    line-height: 90px;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.detachFault .content .tab_box .box li .totalText {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+.detachFault .content .tab_box .box li .chart {
+    height: 77px;
+}
+
+.detachFault .content .tab_box .box li .chart .noDeal {
+    float: left;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 69px;
+    font-size: 26px;
+    text-align: right;
+    color: #527bff;
+}
+
+.detachFault .content .tab_box .box li .chart .bar {
+    float: left;
+    width: 90px;
+    height: 96px;
+    position: relative;
+}
+
+.detachFault .content .tab_box .box li .chart .bar .noDealBar {
+    float: left;
+    width: 32px;
+    background: #ffac1b;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.detachFault .content .tab_box .box li .chart .bar .arDealBar {
+    float: left;
+    width: 32px;
+    background: #527bff;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.detachFault .content .tab_box .box li .chart .arDeal {
+    float: left;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 69px;
+    font-size: 26px;
+    text-align: left;
+    color: #527bff;
+}
+
+.detachFault .content .tab_menu {
+    width: 290px;
+    height: 32px;
+    position: absolute;
+    top: 690px;
+    left: 652px;
+}
+
+.detachFault .content .tab_menu li {
+    width: 25px;
+    cursor: pointer;
+    height: 25px;
+    background: red;
+    float: left;
+    margin-right: 16px;
+    background: url(../images/troubleTable/nav.png) no-repeat;
+}
+
+.detachFault .content .tab_menu .current {
+    background: url(../images/troubleTable/navCur.png) no-repeat;
+}
+
+.detachFault .content .Legend {
+    width: 340px;
+    height: 25px;
+    position: absolute;
+    top: 685px;
+    left: 32px;
+}
+
+.detachFault .content .Legend li {
+    width: 170px;
+    float: left;
+}
+
+.detachFault .content .Legend li div {
+    float: left;
+    font-size: 26px;
+    color: #c5d3ff;
+    line-height: 26px;
+}
+
+.detachFault .content .Legend li .noDealBar {
+    width: 36px;
+    height: 24px;
+    background: #ffac1b;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.detachFault .content .Legend li .arDealBar {
+    width: 36px;
+    height: 24px;
+    background: #527bff;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.datePicker-trigger{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 100px;
+}
+
+/***************************提示框样式***********************/
+
+.tooltip {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    font-family: simsum;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    text-align: left;
+    background-color: #3471fd;
+    opacity: .9;
+    border: 1px solid #7fedf5;
+    border-radius: 15px;
+    padding: 8px;
+    font-family: 微软雅黑;
+    z-index: 6;
+    white-space: normal;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #7fedf5;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+::-webkit-scrollbar{
+    height: 0;
+};

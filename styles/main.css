@@ -1,0 +1,609 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    transform-origin: 0px 0px 0px;
+    -ms-transform-origin: 0 0;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Microsoft YaHei';
+}
+
+.list {
+    position: absolute;
+    left: 400px;
+    color: red;
+    list-style: none;
+    top: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+.center {
+    background: url(../images/mainInterface/centerBg.png) no-repeat 0 0/100% 100%;
+    position: absolute;
+    width: 2475px;
+    height: 1856px;
+    top: 0;
+    left: 0;
+}
+
+.center .tittle {
+    position: absolute;
+    top: 46px;
+    left: 963px;
+    width: 553px;
+    height: 81px;
+    background: url(../images/mainInterface/tittle.png) no-repeat 0 0/100% 100%;
+}
+
+.center .ball-tittle {
+    position: absolute;
+    top: 80px;
+    left: 27px;
+    font-size: 40px;
+    color: #82b7ff;
+}
+
+.center .branch-circles {
+    position: absolute;
+    left: 24px;
+    top: 145px;
+    width: 1588px;
+    height: 1665px;
+}
+
+.center .branch-circles .currItem-bg {
+    position: absolute;
+    left: 459px;
+    top: 100px;
+    height: 90px;
+    width: 780px;
+    background: url(../images/mainInterface/currItemBg.png) no-repeat 0 0/100% 100%;
+}
+
+.tooltip {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    font-family: simsum;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    background-color: #3471fd;
+    opacity: .9;
+    border: 2px solid #7fedf5;
+    border-radius: 15px;
+    padding: 8px;
+    font-family: 微软雅黑;
+    z-index: 6;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #7fedf5;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+
+
+/****************************************紧急状况************************************/
+
+.center .mergency {
+    box-sizing: border-box;
+    position: absolute;
+    width: 787px;
+    height: 130px;
+    line-height: 66px;
+    right: 45px;
+    top: 76px;
+    color: #fff;
+    font-size: 30px;
+    padding: 0 10px;
+    background: url(../images/mainInterface/mergencyBg.png) no-repeat 0 0/contain
+}
+
+.center .mergency .title {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    font-size: 40px;
+    height: 40px;
+    line-height: 1;
+    color: #fff;
+}
+
+.center .mergency .gundong-text {
+    margin-top: 60px;
+    margin-left: 11px;
+}
+
+
+/************************************告警列表**********************************/
+
+.center .alarm {
+    position: absolute;
+    background: url(../images/mainInterface/alarmBg.png) no-repeat 0% 0%/185px 185px;
+    top: 220px;
+    right: 30px;
+    height: 195px;
+    width: 790px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5e8fff;
+}
+
+.center .alarm .total-alarm {
+    position: absolute;
+    top: 99px;
+    left: 40px;
+}
+
+.center .alarm .alarm-total-number {
+    font-size: 64px;
+    color: #fff;
+}
+
+.center .alarm .unit {
+    font-size: 26px;
+    color: #fefefe;
+    margin-left: 10px;
+}
+
+.center .alarm .table-head {
+    position: absolute;
+    left: 205px;
+    top: 5px;
+    height: 180px;
+    width: 100px;
+    background: #1f060a;
+    font-size: 26px;
+    color: #d1aab0;
+    text-align: center;
+    line-height: 2.3;
+}
+
+.center .alarm .table-head>div {
+    height: 50%;
+}
+
+.center .alarm .alarm-list {
+    position: absolute;
+    left: 308px;
+    top: 5px;
+}
+
+.center .alarm .alarm-item {
+    position: relative;
+    float: left;
+    height: 180px;
+    width: 90px;
+    background: #1f060a;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    line-height: 2.3;
+}
+
+
+/*
+.center .alarm .alarm-item:nth-child(2) {
+    width: 120px;
+}*/
+
+.center .alarm .alarm-title {
+    height: 50%;
+}
+
+.center .alarm .alarm-value {
+    height: 50%;
+    color: #fb4343;
+    cursor: pointer;
+}
+
+.center .alarm .alarm-value:hover {
+    font-weight: 700;
+    color: #e27474;
+}
+
+
+/*.center .alarm .alarm-total {
+    height: 33%;
+}*/
+
+
+/******************************链路机房*******************************/
+
+.center .lianlu-routes {
+    position: absolute;
+    width: 790px;
+    height: 940px;
+    right: 30px;
+    top: 450px;
+}
+
+.center .lianlu-routes .total-route {
+    height: 140px;
+    width: 100%;
+}
+
+.center .total-route .route-tittle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    color: #82b7ff;
+}
+
+.center .total-route .total-item {
+    float: left;
+    position: relative;
+    margin-top: 65px;
+    height: 100px;
+    width: 350px;
+    font-size: 32px;
+}
+
+.center .total-route .total-item:nth-child(1) {
+    width: 400px;
+}
+
+.center .total-route .title {
+    float: left;
+    color: #b1b1b1;
+    text-indent: 30px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.center .total-route .title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.center .total-route :nth-child(1) .title:before {
+    background: #537cff;
+}
+
+.center .total-route :nth-child(2) .title:before {
+    background: #53ccff;
+}
+
+.center .total-route .value {
+    font-size: 40px;
+    float: left;
+    color: #fefefe;
+    margin-left: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.center .lianlu-routes .route-list {
+    position: absolute;
+    width: 790px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5e8fff;
+}
+
+.center .route-list .route-item {
+    position: relative;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.center .route-list .route-item .route-title {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    width: 288px;
+    font-size: 30px;
+    color: #fefefe;
+    padding-right: 10px;
+}
+
+.center .route-list .route-item .route-title-in {
+    background: url(../images/mainInterface/routeBg.png) no-repeat 0 0/100% 100%
+}
+
+.center .route-list .route-item .route-title-out {
+    background: url(../images/mainInterface/routeBg_out.png) no-repeat 0 0/100% 100%
+}
+
+.center .route-list .route-item .route-bar {
+    position: absolute;
+    left: 295px;
+    top: 0;
+    height: 100%;
+    width: 160px;
+}
+
+.center .route-bar .bar-item {
+    height: 46%;
+    width: 625px;
+}
+
+.center .route-bar .bar-item:nth-child(2) {
+    margin-top: 3%;
+}
+
+.center .route-bar .flow {
+    float: left;
+    background: #527bff;
+    font-size: 24px;
+    color: #527bff;
+    height: 100%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.center .route-bar .band-width {
+    float: left;
+    background: #52ccff;
+    height: 100%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.center .route-bar .label {
+    float: left;
+    font-size: 24px;
+    color: #527bff;
+    margin-left: 5px;
+    height: 100%;
+    line-height: 1;
+}
+
+
+/*****************************主机运行负载分布****************************/
+
+.center .load-distribute {
+    position: absolute;
+    right: 30px;
+    top: 1326px;
+    height: 300px;
+    width: 790px;
+}
+
+.center .load-distribute .load-tittle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    color: #82b7ff;
+}
+
+.center .load-distribute .disk-tittle {
+    position: absolute;
+    top: 254px;
+    left: 0;
+    font-size: 30px;
+    color: #82b7ff;
+    width: 100%;
+    border-top: 2px solid #5e8fff;
+}
+
+.center .pie-container {
+    width: 100%;
+    height: 210px;
+    margin-top: 50px;
+}
+
+
+/*****************************点击主机加载分布的弹出框样式*********************************/
+
+.monitor-list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(19, 25, 48, .8);
+    display: none;
+}
+
+.monitor-list-container .detailList {
+    box-sizing: border-box;
+    position: absolute;
+    right: 45px;
+    top: 20%;
+    height: 1320px;
+    width: 1500px;
+    padding: 91px 120px 131px 120px;
+    background: url(../images/mainInterface/modal_bg.png) no-repeat 0 0/100% 100%;
+}
+
+.detailList .alarmDetail {
+    position: relative;
+    box-sizing: border-box;
+    height: 1060px;
+    width: 100%;
+    padding: 1px;
+    border: 2px solid #172e92;
+    overflow: auto;
+}
+
+.detailList .list-item {
+    border: 1px solid #0f2068;
+    color: #b1b1b1;
+    font-size: 34px;
+}
+
+.detailList .list-item .time-ip {
+    box-sizing: border-box;
+    padding: 20px 10px;
+    width: 100%;
+    color: #5e8fff;
+}
+
+.detailList .list-item .content {
+    box-sizing: border-box;
+    padding: 0 10px 20px;
+    width: 100%;
+}
+
+.detailList .close-monitor {
+    position: absolute;
+    right: 68px;
+    top: 31px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: url(../images/mainInterface/close_btn.png) no-repeat 0 0/contain;
+}
+
+.monitor-list-container .monitor-list {
+    box-sizing: border-box;
+    position: absolute;
+    right: 45px;
+    bottom: 87px;
+    height: 1320px;
+    width: 1200px;
+    padding: 91px 100px 131px 100px;
+    background: url(../images/mainInterface/modal_bg.png) no-repeat 0 0/100% 100%;
+}
+
+.monitor-list-container .title {
+    color: #fff;
+    height: 40px;
+    line-height: 1;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.monitor-list-container .monitor {
+    position: relative;
+    box-sizing: border-box;
+    height: 1060px;
+    width: 100%;
+    padding: 1px;
+    padding-top: 90px;
+    border: 2px solid #172e92;
+    overflow: hidden;
+}
+
+.monitor-list-container .monitor .table-head {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 20px;
+    height: 90px;
+    line-height: 90px;
+    width: 100%;
+    font-size: 30px;
+    color: #5e8fff;
+    background: #0d1a50;
+}
+
+.alarmDetail .table-head>div {
+    width: 33%;
+}
+
+.monitor-list .monitor .table-head>div {
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.monitor-list .monitor .table-head>div:nth-child(1) {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.monitor-list .monitor .table-head>div:nth-child(2) {
+    width: 25%;
+}
+
+.monitor-list .monitor .table-head>div:nth-child(3) {
+    width: 25%;
+}
+
+.monitor-list-container .monitor .table-container {
+    height: 970px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.monitor-list-container table {
+    width: 100%;
+    background: #081030;
+    border-collapse: collapse;
+}
+
+.monitor-list-container table tr {
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    height: 90px;
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid #0f2068;
+}
+
+.monitor-list table td {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 34px;
+}
+
+.monitor-list table td:nth-child(1) {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.monitor-list table td:nth-child(2) {
+    width: 30%;
+}
+
+.monitor-list table td:nth-child(3) {
+    width: 20%;
+}
+
+.monitor-list .close-monitor {
+    position: absolute;
+    right: 50px;
+    top: 31px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: url(../images/mainInterface/close_btn.png) no-repeat 0 0/contain;
+}
+
+.datePicker-trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: #112373;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2949d1;
+}

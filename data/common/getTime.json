@@ -1,0 +1,38 @@
+{
+	"gongAnCurrentYear": {
+		"start": "2016-12-21",
+		"end": "2017-12-20"
+	},
+	"gongAnCurrentSeason": {
+		"start": "2017-03-21",
+		"end": "2017-06-20"
+	},
+	"gongAnCurrentMonth": {
+		"start": "2017-04-21",
+		"end": "2017-05-20"
+	},
+	"gongAnCurrentWeek": {
+		"start": "2017-05-18",
+		"end": "2017-05-24"
+	},
+	"nomalCurrentYear": {
+		"start": "2017-01-01",
+		"end": "2017-12-31"
+	},
+	"nomalCurrentSeason": {
+		"start": "2017-04-01",
+		"end": "2017-06-30"
+	},
+	"nomalCurrentMonth": {
+		"start": "2017-05-01",
+		"end": "2017-05-31"
+	},
+	"nomalCurrentWeek": {
+		"start": "2017-05-15",
+		"end": "2017-05-21"
+	},
+	"currentDay": {
+		"start": "2017-05-19",
+		"end": "2017-05-19"
+	}
+}

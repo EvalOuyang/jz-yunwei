@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>运维监视系统</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <script type="text/javascript" src='./sea-modules/jquery.min.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <iframe class="cipan" height="928px" width="2475px" frameborder="0" src="./pages/cipan.html"></iframe>
+        <iframe class="donghuan" height="928px" width="2475px" frameborder="0" src="./pages/donghuan.html"></iframe>
+        <iframe class="main" height="1856px" width="2475px" frameborder="0" src="./pages/main.html"></iframe>
+        <iframe class="bigData" height="928px" width="2475px" frameborder="0" src="http://12.68.0.135:8080/OMC/home/cqIndex.action"></iframe>
+        <iframe class="guzhang" height="928px" width="2475px" frameborder="0" src="./pages/guzhang.html"></iframe>
+    </div>
+    <script type="text/javascript">
+        var x
+        var y
+        x = window.innerWidth / 7425
+        y = window.innerHeight / 1856
+        $('body').css('webkitTransform', 'scale(' + x + ',' + y + ')') /* for Chrome || Safari */
+        $('body').css('msTransform', 'scale(' + x + ',' + y + ')') /* for Firefox */
+        $('body').css('mozTransform', 'scale(' + x + ',' + y + ')') /* for IE */
+        $('body').css('oTransform', 'scale(' + x + ',' + y + ')') /* for Opera */
+    </script>
+</body>
+
+</html>
